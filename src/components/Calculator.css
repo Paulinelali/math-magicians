@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.calculator-wrapper{
+    margin: auto;
+    width: fit-content;
+}
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    background-color: #858693;
+    border: 1px solid white;
+}
+
+table tr{
+    background-color: #040404;
+    border: 1px solid white;
+}
+
+table th {
+    background-color: #858693;
+    color: white;
+    text-align: right;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+table tr td{
+    background-color: #e0e0e0;
+    width: 5rem;
+    height: 3.5rem;
+}
+
+.xt-right{
+    background-color: #f59249
+}

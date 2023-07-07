@@ -1,45 +1,110 @@
-import React from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
+import Button from './Buttons';
 import './Calculator.css';
 
-const Calculator = () => (
-  <div className="page-wrapper">
-    <div className="calculator-wrapper">
-      <table>
-        <tr>
-          <th colSpan="4">0</th>
-        </tr>
-        <tr>
-          <td>AC</td>
-          <td>+/-</td>
-          <td>%</td>
-          <td className="xt-right">÷</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-          <td className="xt-right">x</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td className="xt-right">-</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td className="xt-right">+</td>
-        </tr>
-        <tr>
-          <td colSpan="2">0</td>
-          <td>.</td>
-          <td className="xt-right">=</td>
-        </tr>
-      </table>
+function Calculator() {
+  const [display, setDisplay] = useState({
+    total: '0',
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (buttonName) => {
+    const result = calculate(display, buttonName);
+    setDisplay(result);
+  };
+
+  const { total, next, operation } = display;
+
+  return (
+    <div className="page-wrapper">
+      <div className="calculator-wrapper">
+        <table>
+          <tr>
+            <th colSpan="4" className="display">
+              {total}
+              {' '}
+              {operation}
+              {' '}
+              {next}
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <Button label="AC" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="+/-" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="%" handleClick={handleClick} />
+            </td>
+            <td className="coloredBg">
+              <Button label="÷" handleClick={handleClick} />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <Button label="7" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="8" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="9" handleClick={handleClick} />
+            </td>
+            <td className="coloredBg">
+              <Button label="x" handleClick={handleClick} />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <Button label="4" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="5" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="6" handleClick={handleClick} />
+            </td>
+            <td className="coloredBg">
+              <Button label="-" handleClick={handleClick} />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <Button label="1" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="2" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="3" handleClick={handleClick} />
+            </td>
+            <td className="coloredBg">
+              <Button label="+" handleClick={handleClick} />
+            </td>
+          </tr>
+
+          <tr>
+            <td colSpan="2">
+              <Button label="0" handleClick={handleClick} />
+            </td>
+            <td>
+              <Button label="." handleClick={handleClick} />
+            </td>
+            <td className="coloredBg">
+              <Button label="=" handleClick={handleClick} />
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default Calculator;

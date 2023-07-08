@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
+import Quote from './Quotes';
 import Button from './Buttons';
 import './Calculator.css';
 
@@ -103,6 +104,7 @@ function Calculator() {
           </tr>
         </table>
       </div>
+      <Quote />
     </div>
   );
 }

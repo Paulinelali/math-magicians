@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Quotes.css';
-
+import '../styles/quotes.css'
 const Quote = () => {
   const [quote, setQuote] = useState(['Money is good!']);
   const [loading, setLoading] = useState(false);
@@ -32,14 +31,14 @@ const Quote = () => {
 
   if (loading) {
     return (
-      <div>
+      <div className="quotation-loading">
         <p>Loading...</p>
       </div>
     );
   }
   if (hasError) {
     return (
-      <div>
+      <div className="quotation-error">
         <p>Something went wrong!</p>
       </div>
     );
@@ -47,7 +46,6 @@ const Quote = () => {
 
   return (
     <div className="quotation">
-      <h2>Today&apos;s Quote</h2>
       { quote.quote }
     </div>
   );

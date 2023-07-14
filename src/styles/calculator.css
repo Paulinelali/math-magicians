@@ -9,6 +9,8 @@
   margin: auto;
   margin-top: 5%;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calculator-wrapper {

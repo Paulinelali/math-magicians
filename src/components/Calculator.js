@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Button from './Buttons';
-import './Calculator.css';
+import '../styles/calculator.css';
 
 function Calculator() {
   const [display, setDisplay] = useState({
@@ -19,7 +19,7 @@ function Calculator() {
 
   return (
     <div className="page-wrapper">
-      <h1>Let's do some math!</h1>
+      <h1>Let&apos;s do some math!</h1>
       <div className="calculator-wrapper">
         <table>
           <tbody>

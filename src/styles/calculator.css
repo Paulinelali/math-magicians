@@ -5,16 +5,19 @@
 }
 
 .page-wrapper {
-  width: 50%;
-  margin: auto;
   margin-top: 5%;
   text-align: center;
   display: flex;
   justify-content: space-between;
 }
 
+.page-wrapper h1{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .calculator-wrapper {
-  margin: auto;
   width: fit-content;
 }
 
@@ -28,12 +31,12 @@ table {
   border: 1px solid white;
 }
 
-table tr {
+table tbody tr {
   background-color: #040404;
   border: 1px solid white;
 }
 
-table th {
+table tbody th {
   background-color: #858693;
   color: white;
   text-align: right;
@@ -42,7 +45,7 @@ table th {
   font-weight: 400;
 }
 
-table tr td {
+table tbody tr td {
   background-color: #e0e0e0;
   width: 5rem;
   height: 3.5rem;

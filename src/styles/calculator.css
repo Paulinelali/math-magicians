@@ -5,17 +5,8 @@
 }
 
 .page-wrapper {
-  width: 50%;
-  margin: auto;
-  margin-top: 5%;
-  text-align: center;
-}
-
-.calculator-wrapper {
-  margin: auto;
-  width: fit-content;
-  background-color: teal;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
 }
 
 .row {

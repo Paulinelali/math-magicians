@@ -104,7 +104,7 @@ This project was built using the following stack:
 
 ## 🚀 Live Demo 
 
-N/A
+[Live demo](https://math-magicians-vzxv.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

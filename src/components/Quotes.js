@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import '../styles/quotes.css'
+import '../styles/quotes.css';
+
 const Quote = () => {
   const [quote, setQuote] = useState(['Money is good!']);
   const [loading, setLoading] = useState(false);

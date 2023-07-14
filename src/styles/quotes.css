@@ -1,4 +1,6 @@
-.quotation, .quotation-loading, .quotation-error{
+.quotation,
+.quotation-loading,
+.quotation-error {
   position: absolute;
   top: 50%;
   left: 50%;
